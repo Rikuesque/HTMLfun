@@ -8,9 +8,23 @@
         flex-direction: row;
         font-family:monospace;
         color:darkcyan;
+        justify-content: center;
         flex-wrap: wrap;
     }
+    .flex-container2 {
+        display: flex;
+        background-color: darkgrey;
+        flex-direction: row;
+        font-family:monospace;
+        color:darkcyan;
+    }
     .flex-container > div {
+        background-color: #f1f1f1;
+        margin: 10px;
+        padding: 20px;
+        font-size: 20px;
+    }
+    .flex-container2 > div {
         background-color: #f1f1f1;
         margin: 10px;
         padding: 20px;
@@ -41,7 +55,7 @@
 <h1 class="preset3">This is Riku's blog!</h1>
 <img class="preset2" src="media/kanye.jpg" width="300" height="">
 <h2 title="My personal favorite!" class="preset3">My Beautiful Dark Twisted Fantasy</h2>
-<div class="flex-container">
+<div class="flex-container2">
     <div><img src="media/download.jpeg" style="float:right;width:100px;height:100px;margin:20px;"></div>
     <div>Kanye's 5th studio album My Beautiful Dark Twisted Fantasy was a critically acclaimed masterpiece.
     It was masterfully orchestrated and produced. Kanye brought together the biggest names in the
@@ -50,7 +64,7 @@
     </div>
 </div>
 <h2 class="preset3">The Life of Pablo</h2>
-<div class="flex-container">
+<div class="flex-container2">
     <div><img src="media/tlop.jpg" style="float:left;width:100px;height:100px;margin-right:20px;"></div>
     <div>This is Kanye's 2016 album. The album is a personal statement about Kanye being torn between god and
     family, or the party life. Tracks like Waves and Father Stretch My Hands were perfect summer sounds, with
@@ -61,7 +75,7 @@
     </div>
 </div>
 <h2 class="preset3">DONDA</h2>
-<div class="flex-container">
+<div class="flex-container2">
     <div><img src="media/donda.jpg" style="float:right;width:150px;height:100px;margin:20px;"></div>
     <div>Donda is Kanye's 10th studio album released in 2021. The album is a dedication to Kanye's mother whome
     Kanye had admiration for greatly. The album was a mixture of gospel, rap, and experimental. Kanye held three
