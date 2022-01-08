@@ -5,32 +5,31 @@
     .flex-container {
         display: flex;
         background-color: darkgrey;
-        flex-direction: row;
-        font-family:monospace;
-        color:darkcyan;
         justify-content: space-evenly;
+        flex-direction: row;
         flex-wrap: wrap;
-        flex-grow: 2;
+    }
+    .flex-items {
+        background-color:white;
+        margin: 10px;
+        padding: 20px;
+        width: 150px;
+        height: 150px;
+        margin: px;
     }
     .flex-container2 {
         display: flex;
         background-color: darkgrey;
         flex-direction: row;
-        font-family:monospace;
-        color:darkcyan;
         justify-content: space-evenly;
     }
-    .flex-container > div {
-        background-color: #f1f1f1;
-        margin: 10px;
-        padding: 20px;
-        font-size: 20px;
-    }
-    .flex-container2 > div {
-        background-color: #f1f1f1;
-        margin: 10px;
-        padding: 20px;
-        font-size: 20px;
+    .flex-items2 {
+        color:darkcyan;
+        background-color:white;
+        margin:10px;
+        padding:20px;
+        font-size:20px;
+        font-family:monospace;
     }
     .preset {
         background-color:darkgrey;
@@ -59,7 +58,7 @@
 <h2 title="My personal favorite!" class="preset3">My Beautiful Dark Twisted Fantasy</h2>
 <div class="flex-container2">
     <div><img src="media/download.jpeg" style="width:100px;height:100px;margin:20px;"></div>
-    <div>Kanye's 5th studio album My Beautiful Dark Twisted Fantasy was a critically acclaimed masterpiece.
+    <div class="flex-items2">Kanye's 5th studio album My Beautiful Dark Twisted Fantasy was a critically acclaimed masterpiece.
     It was masterfully orchestrated and produced. Kanye brought together the biggest names in the
     rap industry and came out with numerous hits that impacted the whole industry. This album is listed
     as the <strong>third best album of all time</strong> in the Rolling Stones list.
@@ -68,7 +67,7 @@
 <h2 class="preset3">The Life of Pablo</h2>
 <div class="flex-container2">
     <div><img src="media/tlop.jpg" style="width:100px;height:100px;margin-right:20px;"></div>
-    <div>This is Kanye's 2016 album. The album is a personal statement about Kanye being torn between god and
+    <div class="flex-items2">This is Kanye's 2016 album. The album is a personal statement about Kanye being torn between god and
     family, or the party life. Tracks like Waves and Father Stretch My Hands were perfect summer sounds, with
     No More Parties in LA and Saint Pablo having memorable lyrics and flow. Kanye did a worldwide tour upon
     release of the album, although it got cancelled midway through due to Kanye's <strong>declining mental condition</strong>.
@@ -79,7 +78,7 @@
 <h2 class="preset3">DONDA</h2>
 <div class="flex-container2">
     <div><img src="media/donda.jpg" style="width:150px;height:100px;margin:20px;"></div>
-    <div>Donda is Kanye's 10th studio album released in 2021. The album is a dedication to Kanye's mother whome
+    <div class="flex-items2">Donda is Kanye's 10th studio album released in 2021. The album is a dedication to Kanye's mother whome
     Kanye had admiration for greatly. The album was a mixture of gospel, rap, and experimental. Kanye held three
     listening parties to get realtime feedback from the audience to shape his album. The album turned out great
     with sounds never heard of before and Kanye once again <strong>pushing the boundries</strong>. Shortly after the release of the
@@ -89,15 +88,20 @@
 <!-- <a style="font-family:monospace; color:darkcyan; font-size:larger;" href="mailto:rikuesque@gmail.com"><strong>Here's my email.</strong></a> -->
 <iframe src="https://akanegoda.com" style="height:400px;width:600px"></iframe>
 <div class="flex-container">
-    <div><img src="media/dropout.jpg" style="width:150px;height:150px;margin:0px;"></div>
-    <div><img src="media/late.jpg" style="width:150px;height:150px;margin:0px;"></div>
-    <div><img src="media/graduation.jpeg" style="width:150px;height:150px;margin:0px;"></div>
-    <div><img src="media/heartbreak.jpg" style="width:150px;height:150px;margin:0px;"></div>
-    <div><img src="media/download.jpeg" style="width:150px;height:150px;margin:0px;"></div>
-    <div><img src="media/yeezus.jpg" style="width:150px;height:150px;margin:0px;"></div>
-    <div><img src="media/tlop.jpg" style="width:150px;height:150px;margin:0px;"></div>
-    <div><img src="media/ye.jpg" style="width:150px;height:150px;margin:0px;"></div>
-    <div><img src="media/jik.jpg" style="width:150px;height:150px;margin:0px;"></div>
-    <div><img src="media/donda.jpg" style="width:150px;height:150px;margin:0px;"></div>
+    <div class="flex-items"><img src="media/dropout.jpg"></div>
+    <div class="flex-items"><img src="media/late.jpg"></div>
+    <div class="flex-items"><img src="media/graduation.jpeg"></div>
+    <div class="flex-items"><img src="media/heartbreak.jpg"></div>
+    <div class="flex-items"><img src="media/download.jpeg"></div>
+    <div class="flex-items"><img src="media/yeezus.jpg"></div>
+    <div class="flex-items"><img src="media/tlop.jpg"></div>
+    <div class="flex-items"><img src="media/ye.jpg"></div>
+    <div class="flex-items"><img src="media/jik.jpg"></div>
+    <div class="flex-items"><img src="media/donda.jpg"></div>
+</div>
+<!-- <img src="shapes.jpg" usemap="#workmap">
+<map name="workmap">
+    <area >
+</map> -->
 </body>
 </html>
