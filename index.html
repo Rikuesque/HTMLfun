@@ -2,6 +2,10 @@
 <html>
 <head>
     <style>
+    img {
+        height: 150px;
+        width: 150px;
+    }
     .grid-container {
         display: grid;
         grid-template-rows: auto auto;
@@ -15,22 +19,24 @@
         background-color:white;
         margin: 10px;
         padding: 20px;
-        width: 150px;
-        height: 150px;
     }
     .background {
+        display: flex;
         background-image: url("media/kanye.png");
         height: 240px;
         width: 300px;
         background-position: center;
         background-size: cover;
         margin-left: 30px;
+        align-items: flex-end;
+        flex-direction: row;
     }
     .background-text {
-        text-align: center;
+        font-family: monospace;
         position: absolute;
         -webkit-text-stroke: 1px black;
         -webkit-text-fill-color: white;
+        margin-bottom: 5px;
     }
     .flex-container {
         display: flex;
@@ -48,41 +54,33 @@
         padding:20px;
         font-size:20px;
         font-family:monospace;
+        border-radius: 10px;
     }
     .preset {
-        border: thick double darkcyan
-    }
-    .preset2 {
         font-family:monospace;
         color:darkcyan;
     }
-    .flex1 {
-        display: flex;
-        background-color:darkgray;
-        justify-content: space-between;
-        flex-direction: row-reverse;
-    }
-    .items {
-        display: flex;
-        height: 150px;
-        width: 150px;
-        flex-direction: row-reverse;
-    }
     </style>
     <title>Work in progress</title>
-    <link rel="icon" type="image/icon" href="/media/logo.ico">
 </head>
 <body style="background-color:rgb(240, 240, 240);">
 
 <div class="background">
-    <div class="background-text">
-        <h1>This is Riku's blog!</h1>
+    <div class="background-text"><h1>Welcome to Riku's blog.</h1></div>
+    <div>
+    Current Date:
+    <input type="text" id="currentDate">
+
+    <script>
+    var today = new Date();
+    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    document.getElementById("currentDate").value = date;
+    </script>
     </div>
 </div>
-<!-- <img class="preset" src="media/kanye.jpg" width="300" height=""> -->
-<!-- <img src="media/kanye.png" width="300" height="240"> -->
+
 <hr style="height:2px;background-color:darkgray;margin:10px">
-<h2 title="My personal favorite!" class="preset2">My Beautiful Dark Twisted Fantasy</h2>
+<h2 title="My personal favorite!" class="preset">My Beautiful Dark Twisted Fantasy</h2>
 <div class="flex-container">
     <div><img src="media/download.jpeg" style="width:100px;height:100px;margin:20px;"></div>
     <div class="flex-items">Kanye's 5th studio album My Beautiful Dark Twisted Fantasy was a critically acclaimed masterpiece.
@@ -91,7 +89,7 @@
     as the <strong>third best album of all time</strong> in the Rolling Stones list.
     </div>
 </div>
-<h2 class="preset2">The Life of Pablo</h2>
+<h2 class="preset">The Life of Pablo</h2>
 <div class="flex-container">
     <div><img src="media/tlop.jpg" style="width:100px;height:100px;margin:20px;"></div>
     <div class="flex-items">This is Kanye's 2016 album. The album is a personal statement about Kanye being torn between god and
@@ -102,7 +100,7 @@
     Saint Paulo. Each representing drugs, art, and religion.
     </div>
 </div>
-<h2 class="preset2">DONDA</h2>
+<h2 class="preset">DONDA</h2>
 <div class="flex-container">
     <div><img src="media/donda.jpg" style="width:100px;height:100px;margin:20px;"></div>
     <div class="flex-items">Donda is Kanye's 10th studio album released in 2021. The album is a dedication to Kanye's mother whome
@@ -114,7 +112,7 @@
 </div>
 
 <hr style="height:2px;background-color:darkgray;margin:20px">
-<h2 class="preset2">Kanye's Discography</h2>
+<h2 class="preset">Kanye's Discography</h2>
 <!-- <iframe src="https://akanegoda.com" style="height:400px;width:600px"></iframe> -->
 
 <div class="grid-container">
@@ -129,12 +127,6 @@
     <div class="grid-items"><img src="media/jik.jpg"></div>
     <div class="grid-items"><img src="media/donda.jpg"></div>
 </div>
-<!-- <div class="flex1">
-    <div class="items">
-        <img src="media/dropout.jpg">
-        <img src="media/late.jpg">
-    </div>
-    <div class="items"><img src="media/graduation.jpeg"></div>
-</div> -->
+
 </body>
 </html>
