@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    .wrapper, html, body {
+        height: 100%;
+    }
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-family: "VCROSDMONO", monospace;
+        font-size: 15px;
+        color:rgb(64, 64, 64);
+    }
+    .preset {
+        margin: 20px;
+        height: 50%;
+    }
+    .container1 {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        font-size: 15px;
+    }
+    .container2 {
+        display: flex;
+        flex-direction: row;
+        margin: 20px;
+        align-items: flex-end;
+        height: 50%;
+    }
+    .column1 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .row1 {
+        display: flex;
+        justify-content: space-between;
+    }
+    </style>
+    <title>YEEZY SUPPLY</title>
+</head>
+<body>
+<div class="wrapper">
+    <a class="preset">HOME</a>
+    <div class="container1">
+        <script>
+        var countDownDate = new Date("Jan 22, 2022 6:00:00").getTime();
+        var x = setInterval(function() {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        let timer = `${days}:${hours}:${minutes}:${seconds}`;
+        document.getElementById("demo").innerHTML = timer;
+
+        if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+        }, 100);
+        </script>
+        <div id="demo">demo</div>
+    </div>
+    <div class="container2">
+        <div class="column1">
+            <a>GENERAL INFO</a><br>
+            <a>CONTANT</a><br>
+            <a>PRIVACY</a><br>
+            <a>TERMS</a><br>
+            <div class="row1">
+                <a>ARCHIVE</a>
+                <div class="row1">
+                    <a>DO NOT SELL MY INFO</a>
+                    <a style="margin-left:20px">DATA SETTINGS</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
