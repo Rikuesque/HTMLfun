@@ -10,8 +10,8 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        font-family: "Digital Tech", monospace;
-        font-size: 16px;
+        font-family: "Space Mono", monospace;
+        font-size: 14px;
         color:rgb(0, 133, 156);
         background-image: url("media/monomount.jpeg");
         background-position: center;
@@ -19,13 +19,17 @@
         background-repeat: no-repeat;
     }
     .preset {
+        display: flex;
+        /* justify-content: space-between; */
         margin: 20px;
         height: 50%;
+
     }
     .container1 {
         display: flex;
         width: 100%;
-        justify-content: space-around;
+        justify-content: space-between;
+        align-items: center;
         font-size: 18px;
         font-family: "VCROSDMONO", monospace;
         color: black;
@@ -46,6 +50,12 @@
         display: flex;
         justify-content: space-between;
     }
+    .extra {
+        font-family: "Space Mono";
+        writing-mode: vertical-rl;
+        color: rgb(0, 133, 156);
+        margin-right: 135px;
+    }
     </style>
     <script>
         function init() {
@@ -53,18 +63,21 @@
         const date = `${today.getFullYear()}-${today.getMonth()+1}-${today.getDate()}`;
         document.getElementById("currentDate").innerHTML = date;
         }
-        // function get() {
-        // const num = console.log(Math.random());
-        // document.getElementById("currentDate").value = num;
-        // }
     </script>
     <title>Riku's Blog</title>
     <link rel="shortcut icon" type="image/png" href="icons/icon2.png">
 </head>
 <body onload="init()">
 <div class="wrapper">
-    <div class="preset"><a style="cursor:pointer;" onclick="console.log(Math.random())">HOME</a></div>
-    <div class="container1"  id="currentDate"><strong>currentDate</strong></div>
+    <div class="preset">
+        <a style="cursor:pointer" onclick="console.log(Math.random())">HOME</a>
+        
+    </div>
+    <div class="container1">
+        <p class="extra" style="opacity:0.0">hidden text lmao</p>
+        <div id="currentDate"><strong>currentDate</strong></div>
+        <p class="extra">Mount Saint Helens : Chiaroscuro VI</p>
+    </div>
     <div class="container2">
         <div class="column1">
             <a>ABOUT ME</a><br>
