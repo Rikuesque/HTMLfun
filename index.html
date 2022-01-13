@@ -53,13 +53,17 @@
         const date = `${today.getFullYear()}-${today.getMonth()+1}-${today.getDate()}`;
         document.getElementById("currentDate").innerHTML = date;
         }
+        function get() {
+        const num = console.log(Math.random());
+        document.getElementById("currentDate").value = num;
+        }
     </script>
-    <title>RIKUESQUE</title>
+    <title>Riku's Blog</title>
     <link rel="shortcut icon" type="image/png" href="icons/icon2.png">
 </head>
-<body onload="init()">
+<body onload="init()" onload="get()">
 <div class="wrapper">
-    <a class="preset">HOME</a>
+    <div class="preset"><a onclick="console.log(Math.random())">HOME</a></div>
     <div class="container1"  id="currentDate"><strong>currentDate</strong></div>
     <div class="container2">
         <div class="column1">
