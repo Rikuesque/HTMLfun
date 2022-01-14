@@ -18,16 +18,17 @@
         background-size: 1200px 670px;
         background-repeat: no-repeat;
     }
+    .invert {
+        background-color: white;
+        filter: invert(1);
+    }
     .preset {
         display: flex;
-        /* justify-content: space-between; */
         margin: 20px;
         height: 50%;
-
     }
     .container1 {
         display: flex;
-        /* width: 100%; */
         justify-content: center;
         align-items: center;
         font-size: 18px;
@@ -58,25 +59,26 @@
     }
     </style>
     <script>
+        function changeClass() {
+            document.getElementById("opp").classList.toggle("invert");
+        }
         function init() {
-        const today = new Date();
-        const date = `${today.getFullYear()}-${today.getMonth()+1}-${today.getDate()}`;
-        document.getElementById("currentDate").innerHTML = date;
+            const today = new Date();
+            const date = `${today.getFullYear()}-${today.getMonth()+1}-${today.getDate()}`;
+            document.getElementById("currentDate").innerHTML = date;
         }
     </script>
     <title>Riku's Blog</title>
     <link rel="shortcut icon" type="image/png" href="icons/icon2.png">
 </head>
-<body onload="init()">
-<div class="wrapper">
+<body style="background-color:white" onload="init()">
+<div class="wrapper" id="opp">
     <div class="preset">
         <a style="cursor:pointer" onclick="console.log(Math.random())">HOME</a>
-        
     </div>
     <div class="container1">
         <p class="extra" style="opacity:0.0">hidden text lmao</p>
         <div style="margin-right:500px;margin-left:500px;" id="currentDate"><strong>currentDate</strong></div>
-        <!-- <img src="media/monomount.jpeg" width="1200px" height="670px"> -->
         <p class="extra">Mount Saint Helens : Chiaroscuro VI</p>
     </div>
     <div class="container2">
@@ -87,10 +89,7 @@
             <a>STYLE</a><br>
             <div class="row1">
                 <a>ARCHIVE</a>
-                <div class="row1">
-                    <a>DO NOT SELL MY INFO</a>
-                    <a style="margin-left:20px">DATA SETTINGS</a>
-                </div>
+                <a style="cursor:pointer" onclick="changeClass()">INVERT</a>
             </div>
         </div>
     </div>
