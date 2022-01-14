@@ -7,6 +7,11 @@
         font-size: 14px;
         background-color: white;
     }
+    a {
+        cursor: pointer;
+        text-decoration: none;
+        color: rgb(0, 133, 156);
+    }
     .wrapper, html, body {
         margin: 0;
         height: 100%;
@@ -23,7 +28,6 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        color:rgb(0, 133, 156);
         background-image: url("media/monomount.jpeg");
         background-position: center;
         background-size: 1200px 670px;
@@ -94,12 +98,12 @@
         // }
     </script>
     <title>Riku's Blog</title>
-    <link rel="shortcut icon" type="image/png" href="icons/icon2.png">
+    <link rel="shortcut icon" type="image/png" href="media/icon2.png">
 </head>
 <body onload="currentTime()">
 <div class="wrapper" id="opp">
     <div class="preset">
-        <a style="cursor:pointer" onclick="console.log(Math.random())">HOME</a>
+        <a onclick="console.log(Math.random())">HOME</a>
     </div>
     <div class="container1">
         <p class="extra" style="opacity:0.0">hidden text lmao</p>
@@ -108,13 +112,13 @@
     </div>
     <div class="container2">
         <div class="column1">
-            <a>ABOUT ME</a><br>
-            <a>MUSIC</a><br>
-            <a>ANIME</a><br>
-            <a>STYLE</a><br>
+            <a href="html/aboutme.html">ABOUT ME</a><br>
+            <a href="html/music.html">MUSIC</a><br>
+            <a href="html/anime.html">ANIME</a><br>
+            <a href="html/style.html">STYLE</a><br>
             <div class="row1">
-                <a>ARCHIVE</a>
-                <a style="cursor:pointer" onclick="changeClass()">INVERT</a>
+                <a href="html/archive.html">ARCHIVE</a>
+                <a onclick="changeClass()">INVERT</a>
             </div>
         </div>
     </div>
