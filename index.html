@@ -6,6 +6,12 @@
         margin: 0;
         height: 100%;
     }
+    /* @font-face {
+    font-family:"Space Mono";
+    src:url("BebasNeue Regular.ttf");
+    } */
+    @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
     .wrapper {
         display: flex;
         flex-direction: column;
@@ -76,7 +82,7 @@
             document.getElementById("clock").innerHTML = time; 
             let t = setTimeout(function(){ currentTime() }, 1000);
         }
-        // function init() {
+        // function currentDate() {
         //     const today = new Date();
         //     const date = `${today.getHours()}-${today.getMinutes()+1}-${today.getSeconds()}`;
         //     document.getElementById("currentDate").innerHTML = date;
@@ -92,7 +98,7 @@
     </div>
     <div class="container1">
         <p class="extra" style="opacity:0.0">hidden text lmao</p>
-        <div style="margin-right:500px;margin-left:500px;" id="clock"><strong>currentTime</strong></div>
+        <div style="margin-right:500px;margin-left:500px;position:relative;bottom:20px;" id="clock"><strong>currentTime</strong></div>
         <p class="extra">Mount Saint Helens : Chiaroscuro VI</p>
     </div>
     <div class="container2">
