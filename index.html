@@ -39,6 +39,7 @@
     }
     .preset {
         display: flex;
+        flex-direction: column;
         margin: 20px;
         height: 50%;
     }
@@ -52,19 +53,15 @@
     }
     .container2 {
         display: flex;
-        flex-direction: row;
-        margin: 20px;
-        align-items: flex-end;
-        height: 50%;
-    }
-    .column1 {
-        display: flex;
         flex-direction: column;
-        width: 100%;
+        margin: 20px;
+        height: 50%;
+        justify-content: flex-end;
     }
     .row1 {
         display: flex;
         justify-content: space-between;
+        width: 100%;
     }
     .extra {
         font-family: "Space Mono", monospace;
@@ -103,7 +100,7 @@
 <body onload="currentTime()">
 <div class="wrapper" id="opp">
     <div class="preset">
-        <a onclick="console.log(Math.random())">HOME</a>
+        <div><a onclick="console.log(Math.random())">HOME</a></div>
     </div>
     <div class="container1">
         <p class="extra" style="opacity:0.0">hidden text lmao</p>
@@ -111,15 +108,13 @@
         <p class="extra">Mount Saint Helens : Chiaroscuro VI</p>
     </div>
     <div class="container2">
-        <div class="column1">
-            <a href="html/aboutme.html">ABOUT ME</a><br>
-            <a href="html/music.html">MUSIC</a><br>
-            <a href="html/anime.html">ANIME</a><br>
-            <a href="html/style.html">STYLE</a><br>
-            <div class="row1">
-                <a href="html/archive.html">ARCHIVE</a>
-                <a onclick="changeClass()">INVERT</a>
-            </div>
+        <div><a href="html/aboutme.html">ABOUT ME</a></div><br>
+        <div><a href="html/music.html">MUSIC</a></div><br>
+        <div><a href="html/anime.html">ANIME</a></div><br>
+        <div><a href="html/style.html">STYLE</a></div><br>
+        <div class="row1">
+            <a href="html/archive.html">ARCHIVE</a>
+            <a onclick="changeClass()">INVERT</a>
         </div>
     </div>
 </div>
