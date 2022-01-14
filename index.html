@@ -62,23 +62,48 @@
         function changeClass() {
             document.getElementById("opp").classList.toggle("invert");
         }
-        function init() {
-            const today = new Date();
-            const date = `${today.getFullYear()}-${today.getMonth()+1}-${today.getDate()}`;
-            document.getElementById("currentDate").innerHTML = date;
+        function currentTime() {
+            let date = new Date(); 
+            let hh = date.getHours();
+            let mm = date.getMinutes();
+            let ss = date.getSeconds();
+            let session = "AM";
+
+            if(hh === 0){
+                hh = 12;
+            }
+            if(hh > 12){
+                hh = hh - 12;
+                session = "PM";
+            }
+
+            hh = (hh < 10) ? "0" + hh : hh;
+            mm = (mm < 10) ? "0" + mm : mm;
+            ss = (ss < 10) ? "0" + ss : ss;
+                
+            let time = hh + ":" + mm + ":" + ss + " " + session;
+
+            document.getElementById("clock").innerHTML = time; 
+            let t = setTimeout(function(){ currentTime() }, 1000);
         }
+
+        // function init() {
+        //     const today = new Date();
+        //     const date = `${today.getHours()}-${today.getMinutes()+1}-${today.getSeconds()}`;
+        //     document.getElementById("currentDate").innerHTML = date;
+        // }
     </script>
     <title>Riku's Blog</title>
     <link rel="shortcut icon" type="image/png" href="icons/icon2.png">
 </head>
-<body style="background-color:white" onload="init()">
+<body style="background-color:white" onload="currentTime()">
 <div class="wrapper" id="opp">
     <div class="preset">
         <a style="cursor:pointer" onclick="console.log(Math.random())">HOME</a>
     </div>
     <div class="container1">
         <p class="extra" style="opacity:0.0">hidden text lmao</p>
-        <div style="margin-right:500px;margin-left:500px;" id="currentDate"><strong>currentDate</strong></div>
+        <div style="margin-right:500px;margin-left:500px;" id="clock"><strong>currentTime</strong></div>
         <p class="extra">Mount Saint Helens : Chiaroscuro VI</p>
     </div>
     <div class="container2">
